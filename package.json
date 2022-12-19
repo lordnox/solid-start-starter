@@ -1,7 +1,7 @@
 {
   "name": "solid-start",
   "scripts": {
-    "dev": "solid-start dev",
+    "dev": "solid-start dev --host",
     "build": "solid-start build",
     "start": "solid-start start",
     "format": "prettier -w src/*",
@@ -13,12 +13,14 @@
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "prettier": "^2.8.1",
+    "prisma": "^4.7.1",
     "solid-start-node": "^0.2.0",
     "tailwindcss": "^3.2.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8"
   },
   "dependencies": {
+    "@prisma/client": "^4.7.1",
     "@solidjs/meta": "^0.28.0",
     "@solidjs/router": "^0.5.0",
     "solid-js": "^1.6.2",
