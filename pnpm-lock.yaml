@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@prisma/client': ^4.7.1
+  '@solid-auth/core': ^0.0.6
+  '@solid-auth/socials': ^0.0.8
   '@solidjs/meta': ^0.28.0
   '@solidjs/router': ^0.5.0
   autoprefixer: ^10.4.12
@@ -19,6 +21,8 @@ specifiers:
 
 dependencies:
   '@prisma/client': 4.7.1_prisma@4.7.1
+  '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
+  '@solid-auth/socials': 0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4
   '@solidjs/meta': 0.28.2_solid-js@1.6.5
   '@solidjs/router': 0.5.1_solid-js@1.6.5
   solid-js: 1.6.5
@@ -1313,6 +1317,44 @@ packages:
 
   /@sideway/pinpoint/2.0.0:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+
+  /@solid-auth/core/0.0.6_zbbtruizqcg4edakipdsuy4lvu:
+    resolution: {integrity: sha512-NxnMlCmrOW88BzCDeTIKoLj7cMLwKoymv9sFvDDbUVlSuFLhFP2S1rXyOMedCPBbBzxyTIlpOUmB2IlvBLiB6A==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      solid-js: ^1.5.7
+      solid-start: ^0.2.1
+    dependencies:
+      solid-js: 1.6.5
+      solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+    dev: false
+
+  /@solid-auth/oauth2/0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4:
+    resolution: {integrity: sha512-lPU0smfW9FPEmf1maGH/cqnfiSGL+x9Jlt/1q3JFyXtT6XvamkfFUuv64Ik3m4/E4LW1LtXzXWIS4hWKMGuMHQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@solid-auth/core': ~0.0.1
+      solid-js: ^1.5.7
+      solid-start: ^0.2.1
+    dependencies:
+      '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
+      solid-js: 1.6.5
+      solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+    dev: false
+
+  /@solid-auth/socials/0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4:
+    resolution: {integrity: sha512-lLt/kKNy6rA6NWp0rS6o79c4/xlLudMJTxplOvcLv4Zgx4JVKv+bGOMJDwgfpoDkjbXm6vx631K52qiAuOl8gA==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@solid-auth/core': ~0.0.1
+      solid-js: ^1.5.7
+      solid-start: ^0.2.1
+    dependencies:
+      '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
+      '@solid-auth/oauth2': 0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4
+      solid-js: 1.6.5
+      solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+    dev: false
 
   /@solidjs/meta/0.28.2_solid-js@1.6.5:
     resolution: {integrity: sha512-avlLgBPdk4KVxzRGFlYp/MIJo8B5jVgXPgk6OUnUP8km21Z+ovO+DUd7ZPA7ejv8PBdWi9GE3zCzw8RU2YuV2Q==}
