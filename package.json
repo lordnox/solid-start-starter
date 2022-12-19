@@ -3,12 +3,16 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "format": "prettier -w src/*",
+    "push": "prisma db push",
+    "postinstall": "prisma generate"
   },
   "type": "module",
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
+    "prettier": "^2.8.1",
     "solid-start-node": "^0.2.0",
     "tailwindcss": "^3.2.0",
     "typescript": "^4.8.4",
@@ -19,7 +23,8 @@
     "@solidjs/router": "^0.5.0",
     "solid-js": "^1.6.2",
     "solid-start": "^0.2.0",
-    "undici": "^5.11.0"
+    "undici": "^5.11.0",
+    "zod": "^3.20.2"
   },
   "engines": {
     "node": ">=16"

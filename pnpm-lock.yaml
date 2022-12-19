@@ -5,6 +5,7 @@ specifiers:
   '@solidjs/router': ^0.5.0
   autoprefixer: ^10.4.12
   postcss: ^8.4.18
+  prettier: ^2.8.1
   solid-js: ^1.6.2
   solid-start: ^0.2.0
   solid-start-node: ^0.2.0
@@ -12,6 +13,7 @@ specifiers:
   typescript: ^4.8.4
   undici: ^5.11.0
   vite: ^3.1.8
+  zod: ^3.20.2
 
 dependencies:
   '@solidjs/meta': 0.28.2_solid-js@1.6.5
@@ -19,10 +21,12 @@ dependencies:
   solid-js: 1.6.5
   solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
   undici: 5.14.0
+  zod: 3.20.2
 
 devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.20
   postcss: 8.4.20
+  prettier: 2.8.1
   solid-start-node: 0.2.7_5rcqlkztk6lvdy7aksayuiud3e
   tailwindcss: 3.2.4_postcss@8.4.20
   typescript: 4.9.4
@@ -2570,6 +2574,12 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
   /pretty-bytes/6.0.0:
     resolution: {integrity: sha512-6UqkYefdogmzqAZWzJ7laYeJnaXDy2/J+ZqiiMtS7t7OfpXWTlaeGMwX8U6EFvPV/YWWEKRkS8hKS4k60WHTOg==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -3112,3 +3122,7 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
+    dev: false
