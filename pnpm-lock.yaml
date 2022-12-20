@@ -4,7 +4,7 @@ specifiers:
   '@auth/core': ^0.1.4
   '@prisma/client': ^4.7.1
   '@solid-auth/core': ^0.0.6
-  '@solid-auth/next': ^0.0.19
+  '@solid-auth/next': ^0.0.20
   '@solid-auth/socials': ^0.0.8
   '@solidjs/meta': ^0.28.0
   '@solidjs/router': ^0.5.0
@@ -27,7 +27,7 @@ dependencies:
   '@auth/core': 0.1.4
   '@prisma/client': 4.7.1_prisma@4.7.1
   '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
-  '@solid-auth/next': 0.0.19_a7k7cybldbxkfm62wumcop5ome
+  '@solid-auth/next': 0.0.20_a7k7cybldbxkfm62wumcop5ome
   '@solid-auth/socials': 0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4
   '@solidjs/meta': 0.28.2_solid-js@1.6.5
   '@solidjs/router': 0.5.1_solid-js@1.6.5
@@ -1357,8 +1357,8 @@ packages:
       solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
     dev: false
 
-  /@solid-auth/next/0.0.19_a7k7cybldbxkfm62wumcop5ome:
-    resolution: {integrity: sha512-aGcEePidVKh6iYS5JHghv/MFKh1mE0PQUmD8+dHiRRWcnVOF38fyHTz5L5PQCmrl8xE9J8rK3ymVlt0lzw2dQg==}
+  /@solid-auth/next/0.0.20_a7k7cybldbxkfm62wumcop5ome:
+    resolution: {integrity: sha512-EprQSwMDaEuR5XzYkTHn6YXQQbk2nUJgjFc29ie0T4mNpyZmDp5TwVjUV+nL+G7JmjGm7LkKCnLdBa0EC2Z99w==}
     peerDependencies:
       '@auth/core': ~0.1.4 || ^0.1.4
       solid-js: ^1.5.7
