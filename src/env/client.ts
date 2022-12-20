@@ -8,7 +8,6 @@ export const formatErrors = (errors: ZodFormattedError<Map<string, string>, stri
     })
     .filter(Boolean)
 
-console.log(Object.keys(import.meta.env))
 const env = clientScheme.safeParse(import.meta.env)
 
 if (env.success === false) {

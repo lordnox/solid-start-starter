@@ -7,7 +7,7 @@ export const formatErrors = (errors: ZodFormattedError<Map<string, string>, stri
       if (value && '_errors' in value) return `${name}: ${value._errors.join(', ')}\n`
     })
     .filter(Boolean)
-console.log(Object.keys(process.env))
+
 const env = serverScheme.safeParse(process.env)
 
 if (env.success === false) {

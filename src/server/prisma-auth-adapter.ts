@@ -1,15 +1,14 @@
+import { Adapter, AdapterAccount, AdapterUser } from '@auth/core/adapters'
 import { type PrismaClient } from '@prisma/client'
-import { type Adapter } from './prisma-auth-adapter.types'
+import { GithubProfile } from '@auth/core/providers/github'
+import { Awaitable } from '@auth/core'
 
 /**
  * This internal Adapter does not require the email to be a string but allows null as well.
  * GitHub does not necessarily return an email with their OAuth session
  */
 export const PrismaAdapter = (prisma: PrismaClient): Adapter => ({
-  createUser: (data) => {
-    console.log(data)
-    return prisma.user.create({ data })
-  },
+  createUser: (data) => prisma.user.create({ data }),
   getUser: (id) => prisma.user.findUnique({ where: { id } }),
   getUserByEmail: (email) => prisma.user.findUnique({ where: { email } }),
   async getUserByAccount(provider_providerAccountId) {
@@ -22,9 +21,7 @@ export const PrismaAdapter = (prisma: PrismaClient): Adapter => ({
   },
   updateUser: ({ id, ...data }) => prisma.user.update({ where: { id }, data }),
   deleteUser: (id) => prisma.user.delete({ where: { id } }),
-  linkAccount: async (data) => {
-    prisma.account.create({ data })
-  },
+  linkAccount: async (data): Promise<AdapterAccount> => (await prisma.account.create({ data })) as any,
   unlinkAccount: async (provider_providerAccountId) => {
     prisma.account.delete({
       where: { provider_providerAccountId },
