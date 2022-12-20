@@ -2,13 +2,13 @@
   "name": "solid-start",
   "scripts": {
     "dev": "solid-start dev --host",
-    "build": "solid-start build",
+    "build": "solid-start build && npm run postbuild",
     "serve": "vite preview",
     "start": "solid-start start",
     "format": "prettier -w src/*",
     "push": "prisma db push",
     "postinstall": "prisma generate",
-    "postbuild": "cp prisma/schema.prisma .vercel/output/functions/render.func/"
+    "postbuild": "cp node_modules/.pnpm/**/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/"
   },
   "type": "module",
   "devDependencies": {
