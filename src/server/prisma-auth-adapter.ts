@@ -1,6 +1,10 @@
-import { PrismaClient } from '@prisma/client'
-import { type Adapter } from '@auth/core/adapters'
+import { type PrismaClient } from '@prisma/client'
+import { type Adapter } from './prisma-auth-adapter.types'
 
+/**
+ * This internal Adapter does not require the email to be a string but allows null as well.
+ * GitHub does not necessarily return an email with their OAuth session
+ */
 export const PrismaAdapter = (prisma: PrismaClient): Adapter => ({
   createUser: (data) => {
     console.log(data)
