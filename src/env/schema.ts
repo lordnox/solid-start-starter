@@ -1,18 +1,26 @@
+import { isServer } from 'solid-js/web'
 import { z } from 'zod'
+
+if (isServer) {
+  const dotenv = await import('dotenv')
+
+  dotenv.config()
+}
 
 export const serverScheme = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
-  // ENABLE_VC_BUILD: z
-  //   .string()
-  //   .default('1')
-  //   .transform((v) => parseInt(v)),
+  AUTH_TRUST_HOST: z
+    .enum(['true', 'false'])
+    .default('false')
+    .transform((value) => value === 'true'),
+  AUTH_SECRET: z.string(),
   DATABASE_URL: z.string(),
-  SITE_URL: z.string(),
+  START_BASE_URL: z.string(),
   GITHUB_CLIENT_ID: z.string(),
   GITHUB_CLIENT_SECRET: z.string(),
 })
 
 export const clientScheme = z.object({
   MODE: z.enum(['development', 'production', 'test']).default('development'),
-  VITE_SESSION_SECRET: z.string(),
+  START_BASE_URL: z.string().optional().default('http://127.0.0.1:3000'),
 })
