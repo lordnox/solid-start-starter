@@ -7,7 +7,8 @@
     "start": "solid-start start",
     "format": "prettier -w src/*",
     "push": "prisma db push",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "postbuild": "cp prisma/schema.prisma .vercel/output/functions/render.func/"
   },
   "type": "module",
   "devDependencies": {
