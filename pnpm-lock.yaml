@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@auth/core': ^0.1.4
-  '@next-auth/prisma-adapter': ^1.0.5
   '@prisma/client': ^4.7.1
   '@solid-auth/core': ^0.0.6
   '@solid-auth/next': ^0.0.19
@@ -18,6 +17,7 @@ specifiers:
   solid-js: ^1.6.2
   solid-start: ^0.2.0
   solid-start-node: ^0.2.0
+  solid-start-vercel: ^0.2.7
   tailwindcss: ^3.2.0
   typescript: ^4.8.4
   undici: ^5.11.0
@@ -26,7 +26,6 @@ specifiers:
 
 dependencies:
   '@auth/core': 0.1.4
-  '@next-auth/prisma-adapter': 1.0.5_@prisma+client@4.7.1
   '@prisma/client': 4.7.1_prisma@4.7.1
   '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
   '@solid-auth/next': 0.0.19_a7k7cybldbxkfm62wumcop5ome
@@ -46,6 +45,7 @@ devDependencies:
   prettier: 2.8.1
   prisma: 4.7.1
   solid-start-node: 0.2.7_5rcqlkztk6lvdy7aksayuiud3e
+  solid-start-vercel: 0.2.7_kikojxbxtrt7u574kzstp2dkla
   tailwindcss: 3.2.4_postcss@8.4.20
   typescript: 4.9.4
   vite: 3.2.5_@types+node@18.11.17
@@ -1230,15 +1230,6 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
-
-  /@next-auth/prisma-adapter/1.0.5_@prisma+client@4.7.1:
-    resolution: {integrity: sha512-VqMS11IxPXrPGXw6Oul6jcyS/n8GLOWzRMrPr3EMdtD6eOalM6zz05j08PcNiis8QzkfuYnCv49OvufTuaEwYQ==}
-    peerDependencies:
-      '@prisma/client': '>=2.26.0 || >=3'
-      next-auth: ^4
-    dependencies:
-      '@prisma/client': 4.7.1_prisma@4.7.1
-    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2929,6 +2920,21 @@ packages:
       vite: 3.2.5_@types+node@18.11.17
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /solid-start-vercel/0.2.7_kikojxbxtrt7u574kzstp2dkla:
+    resolution: {integrity: sha512-2bQPbCZVsqcNuyuFq4Wlbq/YAP00ADwahRowY047pznNI/gchjbe9w6CnF6xs9RWTnkH53AP8ZICNnWNIRsuHQ==}
+    peerDependencies:
+      solid-start: '*'
+      vite: '*'
+    dependencies:
+      '@rollup/plugin-commonjs': 22.0.2_rollup@2.79.1
+      '@rollup/plugin-json': 4.1.0_rollup@2.79.1
+      '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
+      rollup: 2.79.1
+      solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+      terser: 5.16.1
+      vite: 3.2.5_@types+node@18.11.17
     dev: true
 
   /solid-start/0.2.7_jfq6s65pvyuo652ytqnpyknqye:
