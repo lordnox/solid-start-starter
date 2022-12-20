@@ -12,7 +12,6 @@ export const routeData = () => createServerData$(...serverSession)
 
 export default function Home() {
   const user = useRouteData<typeof routeData>()
-  console.log(user())
 
   return (
     <main class="text-center mx-auto text-gray-700 p-4">

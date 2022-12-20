@@ -7,16 +7,39 @@ import { PrismaAdapter } from '~/server/prisma-auth-adapter'
 import { prisma } from '~/server/db/client'
 import { randomBytes } from 'node:crypto'
 import { type Prisma } from '@prisma/client'
-import { User } from '@auth/core'
 
-const githubEmailEntry = z.object({
-  email: z.string(),
-  primary: z.boolean(),
-  verified: z.boolean(),
-  visibility: z.string().nullable().optional(),
+const github = Github({
+  clientId: serverEnv.GITHUB_CLIENT_ID,
+  clientSecret: serverEnv.GITHUB_CLIENT_SECRET,
+
+  async profile(profile, tokens) {
+    const email = await findGithubEMail(tokens.access_token)
+    const user: Prisma.UserCreateInput & { id: string } = {
+      id: `${profile.id}`,
+      name: profile.name ?? profile.login,
+      email: profile.email ?? email?.email ?? `github:${profile.id}`,
+      emailVerified: email?.verified ? new Date() : null,
+      image: profile.avatar_url,
+    }
+    return user
+  },
 })
-type GitHubEmail = z.infer<typeof githubEmailEntry>
 
+export const solidAuthConfig: SolidAuthConfig = {
+  secret: serverEnv.AUTH_SECRET,
+  providers: [github],
+  debug: false,
+  adapter: PrismaAdapter(prisma) as AuthCoreAdapter,
+  session: {
+    generateSessionToken: () => randomBytes(256).toString('hex'),
+  },
+}
+
+export const session = (request: Request) => getSession(request, solidAuthConfig)
+
+/**
+ * Helper function that retrieves the email address of a github user by access token
+ */
 const findGithubEMail = async (accessToken?: string) => {
   if (!accessToken) return
   const res = await fetch('https://api.github.com/user/public_emails', {
@@ -38,37 +61,11 @@ const findGithubEMail = async (accessToken?: string) => {
   return emails.find((email) => email.primary) ?? emails.find((email) => email.verified) ?? emails[0]
 }
 
-const github = Github({
-  clientId: serverEnv.GITHUB_CLIENT_ID,
-  clientSecret: serverEnv.GITHUB_CLIENT_SECRET,
-
-  async profile(profile, tokens) {
-    const email = await findGithubEMail(tokens.access_token)
-
-    const id = `${profile.id}`
-
-    const user: Prisma.UserCreateInput & { id: string } = {
-      id: id,
-      name: profile.name ?? profile.login,
-      email: profile.email ?? email?.email ?? `github:${profile.id}`,
-      emailVerified: email?.verified ? new Date() : null,
-      image: profile.avatar_url,
-    }
-
-    console.log({ user })
-    return user satisfies User
-  },
+// Github e-mail address object validators
+const githubEmailEntry = z.object({
+  email: z.string(),
+  primary: z.boolean(),
+  verified: z.boolean(),
+  visibility: z.string().nullable().optional(),
 })
-
-export const solidAuthConfig: SolidAuthConfig = {
-  secret: 'something',
-  providers: [github],
-  debug: true,
-  adapter: PrismaAdapter(prisma) as AuthCoreAdapter,
-  session: {
-    generateSessionToken: () => randomBytes(256).toString('hex'),
-  },
-  trustHost: true,
-}
-
-export const session = (request: Request) => getSession(request, solidAuthConfig)
+type GitHubEmail = z.infer<typeof githubEmailEntry>

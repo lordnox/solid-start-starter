@@ -1,7 +1,5 @@
-import { Adapter, AdapterAccount, AdapterUser } from '@auth/core/adapters'
+import { Adapter, AdapterAccount } from '@auth/core/adapters'
 import { type PrismaClient } from '@prisma/client'
-import { GithubProfile } from '@auth/core/providers/github'
-import { Awaitable } from '@auth/core'
 
 /**
  * This internal Adapter does not require the email to be a string but allows null as well.
