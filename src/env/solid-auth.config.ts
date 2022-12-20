@@ -1,7 +1,6 @@
 import { getSession, type SolidAuthConfig } from '@solid-auth/next'
 import Github from '@auth/core/providers/github'
 import { serverEnv } from './server'
-import { PrismaAdapter } from '~/server/prisma-auth-adapter'
 import { prisma } from '~/server/db/client'
 import { randomBytes } from 'node:crypto'
 
@@ -14,7 +13,7 @@ export const solidAuthConfig: SolidAuthConfig = {
     }),
   ],
   debug: false,
-  adapter: PrismaAdapter(prisma),
+  // adapter: PrismaAdapter(prisma),
   session: {
     generateSessionToken: () => randomBytes(256).toString('hex'),
   },

@@ -1,12 +1,6 @@
 import { isServer } from 'solid-js/web'
 import { z } from 'zod'
 
-if (isServer) {
-  const dotenv = await import('dotenv')
-
-  dotenv.config()
-}
-
 export const serverScheme = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
   AUTH_TRUST_HOST: z
