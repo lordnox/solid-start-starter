@@ -8,6 +8,8 @@ specifiers:
   '@solid-auth/socials': ^0.0.8
   '@solidjs/meta': ^0.28.0
   '@solidjs/router': ^0.5.0
+  '@trpc/client': ^10.6.0
+  '@trpc/server': ^10.6.0
   '@types/node': ^18.11.17
   autoprefixer: ^10.4.12
   dotenv: ^16.0.3
@@ -17,6 +19,7 @@ specifiers:
   solid-js: ^1.6.2
   solid-start: ^0.2.0
   solid-start-node: ^0.2.0
+  solid-start-trpc: ^0.0.16
   solid-start-vercel: ^0.2.7
   tailwindcss: ^3.2.0
   typescript: ^4.8.4
@@ -32,9 +35,12 @@ dependencies:
   '@solid-auth/socials': 0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4
   '@solidjs/meta': 0.28.2_solid-js@1.6.5
   '@solidjs/router': 0.5.1_solid-js@1.6.5
+  '@trpc/client': 10.6.0_@trpc+server@10.6.0
+  '@trpc/server': 10.6.0
   dotenv: 16.0.3
   solid-js: 1.6.5
   solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+  solid-start-trpc: 0.0.16_wrm2f5dy6ajhkhdbkmwixr7ojy
   solid-start-vercel: 0.2.7_kikojxbxtrt7u574kzstp2dkla
   undici: 5.14.0
   zod: 3.20.2
@@ -1408,6 +1414,18 @@ packages:
       solid-js: ^1.5.3
     dependencies:
       solid-js: 1.6.5
+
+  /@trpc/client/10.6.0_@trpc+server@10.6.0:
+    resolution: {integrity: sha512-GvZzUQuPStXN9zTyJ+PvlGweEa1mvsbtsAgo6yfnDGjrx1HJbDMtYC+o98lz1T+UOdDPgfDE/R1MaCrWDUrpSA==}
+    peerDependencies:
+      '@trpc/server': 10.6.0
+    dependencies:
+      '@trpc/server': 10.6.0
+    dev: false
+
+  /@trpc/server/10.6.0:
+    resolution: {integrity: sha512-SXqogi536yDpfK0xsCaLvP0bzu5Qzn2rRHVr59NJ0SLwLPPKFjfHIrS+O+QnTA3TVUXvnXG0/Hllu8SJXOm7Zg==}
+    dev: false
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
@@ -2896,6 +2914,20 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /solid-start-trpc/0.0.16_wrm2f5dy6ajhkhdbkmwixr7ojy:
+    resolution: {integrity: sha512-99/EGIE0SObmCVhZR00bYpkEQpCDP22YgjalQpVgm0BKy2+tJzEC6vdvOII2Ppa0Fm7iPwc4LDZoFX2E3KYmsg==}
+    peerDependencies:
+      '@trpc/client': ^10.0.0
+      '@trpc/server': ^10.0.0
+      solid-js: ^1.5.7
+      solid-start: ^0.2.1
+    dependencies:
+      '@trpc/client': 10.6.0_@trpc+server@10.6.0
+      '@trpc/server': 10.6.0
+      solid-js: 1.6.5
+      solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+    dev: false
 
   /solid-start-vercel/0.2.7_kikojxbxtrt7u574kzstp2dkla:
     resolution: {integrity: sha512-2bQPbCZVsqcNuyuFq4Wlbq/YAP00ADwahRowY047pznNI/gchjbe9w6CnF6xs9RWTnkH53AP8ZICNnWNIRsuHQ==}
