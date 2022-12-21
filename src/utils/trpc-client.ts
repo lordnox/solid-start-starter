@@ -4,11 +4,12 @@ import { createResource } from 'solid-js'
 import type { AnyProcedure, AnyRouter, ProcedureArgs, ProcedureType } from '@trpc/server'
 import type { AppRouter } from '~/server/trpc/router/_app'
 import { inferTransformedProcedureOutput } from '@trpc/server/shared'
+import { clientEnv } from '~/env/client'
 
-export const client = createTRPCProxyClient<AppRouter>({
+export const trpc = createTRPCProxyClient<AppRouter>({
   links: [
     httpLink({
-      url: '/api/trpc',
+      url: `${clientEnv.START_BASE_URL}/api/trpc`,
     }),
   ],
 })
@@ -24,15 +25,15 @@ type InferProcedureType<TProcedureType extends ProcedureType, TRouter extends An
 }
 
 type Queries = InferProcedureType<'query', AppRouter>
-type Mutations = InferProcedureType<'mutation', AppRouter>
+// type Mutations = InferProcedureType<'mutation', AppRouter>
 // type Subscriptions = InferProcedureType<'subscription', AppRouter>
 
 const queries: Queries = null as any
-const mutations: Mutations = null as any
+// const mutations: Mutations = null as any
 // const subscriptions: Subscriptions = null as any
 
 type QueryKeys = keyof Queries & string
-type MutationKeys = keyof Mutations & string
+// type MutationKeys = keyof Mutations & string
 // type SubscriptionKeys = keyof Subscriptions & string
 
 type Resolver<TProcedure extends AnyProcedure> = (
@@ -41,12 +42,7 @@ type Resolver<TProcedure extends AnyProcedure> = (
 
 export const useQuery = <TPath extends QueryKeys>(path: TPath, ...params: ProcedureArgs<Queries[TPath]['_def']>) => {
   // extract query and define the correct type
-  const query = client[path].query as Resolver<Queries[TPath]>
+  const query = trpc[path].query as Resolver<Queries[TPath]>
   const fetchData = async () => query(...params)
   return createResource(fetchData)
-}
-
-export const useMutation = <TPath extends MutationKeys>(path: TPath) => {
-  // extract query and define the correct type
-  return client[path].mutate as Resolver<Mutations[TPath]>
 }
