@@ -4,16 +4,12 @@ specifiers:
   '@auth/core': ^0.1.4
   '@prisma/client': ^4.7.1
   '@solid-auth/core': ^0.0.6
-  '@solid-auth/next': ^0.0.20
+  '@solid-auth/next': ^0.0.19
   '@solid-auth/socials': ^0.0.8
   '@solidjs/meta': ^0.28.0
-<<<<<<< HEAD
-  '@solidjs/router': ^0.5.0
+  '@solidjs/router': ^0.6.0
   '@trpc/client': ^10.6.0
   '@trpc/server': ^10.6.0
-=======
-  '@solidjs/router': ^0.6.0
->>>>>>> main
   '@types/node': ^18.11.17
   autoprefixer: ^10.4.12
   dotenv: ^16.0.3
@@ -35,25 +31,17 @@ dependencies:
   '@auth/core': 0.1.4
   '@prisma/client': 4.7.1_prisma@4.7.1
   '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
-  '@solid-auth/next': 0.0.20_a7k7cybldbxkfm62wumcop5ome
+  '@solid-auth/next': 0.0.19_a7k7cybldbxkfm62wumcop5ome
   '@solid-auth/socials': 0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4
   '@solidjs/meta': 0.28.2_solid-js@1.6.5
-<<<<<<< HEAD
-  '@solidjs/router': 0.5.1_solid-js@1.6.5
+  '@solidjs/router': 0.6.0_solid-js@1.6.5
   '@trpc/client': 10.6.0_@trpc+server@10.6.0
   '@trpc/server': 10.6.0
   dotenv: 16.0.3
   solid-js: 1.6.5
-  solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+  solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
   solid-start-trpc: 0.0.16_wrm2f5dy6ajhkhdbkmwixr7ojy
-  solid-start-vercel: 0.2.7_kikojxbxtrt7u574kzstp2dkla
-=======
-  '@solidjs/router': 0.6.0_solid-js@1.6.5
-  dotenv: 16.0.3
-  solid-js: 1.6.5
-  solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
-  solid-start-vercel: 0.2.7_jo6avdye3pnk7glzgrrsy5heom
->>>>>>> main
+  solid-start-vercel: 0.2.7_qtuxwzz4mufugawln5dtsqh22y
   undici: 5.14.0
   zod: 3.20.2
 
@@ -63,10 +51,10 @@ devDependencies:
   postcss: 8.4.20
   prettier: 2.8.1
   prisma: 4.7.1
-  solid-start-node: 0.2.7_pymxqvgx3lxxjfugbmoudzh7ka
+  solid-start-node: 0.2.7_hozh2jmtet2pg4ubalkkm6et5i
   tailwindcss: 3.2.4_postcss@8.4.20
   typescript: 4.9.4
-  vite: 4.0.2_@types+node@18.11.17
+  vite: 4.0.3_@types+node@18.11.17
 
 packages:
 
@@ -1530,11 +1518,11 @@ packages:
       solid-start: ^0.2.1
     dependencies:
       solid-js: 1.6.5
-      solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
     dev: false
 
-  /@solid-auth/next/0.0.20_a7k7cybldbxkfm62wumcop5ome:
-    resolution: {integrity: sha512-EprQSwMDaEuR5XzYkTHn6YXQQbk2nUJgjFc29ie0T4mNpyZmDp5TwVjUV+nL+G7JmjGm7LkKCnLdBa0EC2Z99w==}
+  /@solid-auth/next/0.0.19_a7k7cybldbxkfm62wumcop5ome:
+    resolution: {integrity: sha512-aGcEePidVKh6iYS5JHghv/MFKh1mE0PQUmD8+dHiRRWcnVOF38fyHTz5L5PQCmrl8xE9J8rK3ymVlt0lzw2dQg==}
     peerDependencies:
       '@auth/core': ~0.1.4 || ^0.1.4
       solid-js: ^1.5.7
@@ -1543,7 +1531,7 @@ packages:
       '@auth/core': 0.1.4
       set-cookie-parser: 2.5.1
       solid-js: 1.6.5
-      solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
     dev: false
 
   /@solid-auth/oauth2/0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4:
@@ -1556,7 +1544,7 @@ packages:
     dependencies:
       '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
       solid-js: 1.6.5
-      solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
     dev: false
 
   /@solid-auth/socials/0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4:
@@ -1570,7 +1558,7 @@ packages:
       '@solid-auth/core': 0.0.6_zbbtruizqcg4edakipdsuy4lvu
       '@solid-auth/oauth2': 0.0.8_a3mjmkxcwo6pv6en4z2pwhunz4
       solid-js: 1.6.5
-      solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
     dev: false
 
   /@solidjs/meta/0.28.2_solid-js@1.6.5:
@@ -1629,7 +1617,7 @@ packages:
       source-map: 0.7.4
       yargs: 17.6.2
 
-  /@vinxi/vite-plugin-inspect/0.6.27_rollup@2.79.1+vite@4.0.2:
+  /@vinxi/vite-plugin-inspect/0.6.27_rollup@2.79.1+vite@4.0.3:
     resolution: {integrity: sha512-EI63vk0wGF3XcUYSWsKSeuzisx8lgUnjLSqk9XHnboSnjhbPZKe/cMrcXUbdNi+ZnK/a3L7+w3y/XMYWW4NHRA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1642,7 +1630,7 @@ packages:
       pretty-bytes: 6.0.0
       sirv: 2.0.2
       ufo: 0.8.6
-      vite: 4.0.2_@types+node@18.11.17
+      vite: 4.0.3_@types+node@18.11.17
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2912,7 +2900,7 @@ packages:
       '@babel/types': 7.20.5
       solid-js: 1.6.5
 
-  /solid-start-node/0.2.7_pymxqvgx3lxxjfugbmoudzh7ka:
+  /solid-start-node/0.2.7_hozh2jmtet2pg4ubalkkm6et5i:
     resolution: {integrity: sha512-p7xy34pqIbVfoyoqs57zdi+JVVxQc8uEdBFYyTWJriQa9UTu+Wk6H/Xy0QkMjHapmLiTnT8SxFDWoWslliWnJQ==}
     peerDependencies:
       solid-start: '*'
@@ -2926,15 +2914,14 @@ packages:
       polka: 1.0.0-next.22
       rollup: 2.79.1
       sirv: 2.0.2
-      solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
       terser: 5.16.1
       undici: 5.14.0
-      vite: 4.0.2_@types+node@18.11.17
+      vite: 4.0.3_@types+node@18.11.17
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-<<<<<<< HEAD
   /solid-start-trpc/0.0.16_wrm2f5dy6ajhkhdbkmwixr7ojy:
     resolution: {integrity: sha512-99/EGIE0SObmCVhZR00bYpkEQpCDP22YgjalQpVgm0BKy2+tJzEC6vdvOII2Ppa0Fm7iPwc4LDZoFX2E3KYmsg==}
     peerDependencies:
@@ -2946,13 +2933,10 @@ packages:
       '@trpc/client': 10.6.0_@trpc+server@10.6.0
       '@trpc/server': 10.6.0
       solid-js: 1.6.5
-      solid-start: 0.2.7_jfq6s65pvyuo652ytqnpyknqye
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
     dev: false
 
-  /solid-start-vercel/0.2.7_kikojxbxtrt7u574kzstp2dkla:
-=======
-  /solid-start-vercel/0.2.7_jo6avdye3pnk7glzgrrsy5heom:
->>>>>>> main
+  /solid-start-vercel/0.2.7_qtuxwzz4mufugawln5dtsqh22y:
     resolution: {integrity: sha512-2bQPbCZVsqcNuyuFq4Wlbq/YAP00ADwahRowY047pznNI/gchjbe9w6CnF6xs9RWTnkH53AP8ZICNnWNIRsuHQ==}
     peerDependencies:
       solid-start: '*'
@@ -2962,12 +2946,12 @@ packages:
       '@rollup/plugin-json': 4.1.0_rollup@2.79.1
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
       rollup: 2.79.1
-      solid-start: 0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm
+      solid-start: 0.2.7_fxdzspmiyjog3uht2ieukjauoe
       terser: 5.16.1
-      vite: 4.0.2_@types+node@18.11.17
+      vite: 4.0.3_@types+node@18.11.17
     dev: false
 
-  /solid-start/0.2.7_qnd4b7fzxfi2ty3t7upjaznxgm:
+  /solid-start/0.2.7_fxdzspmiyjog3uht2ieukjauoe:
     resolution: {integrity: sha512-e/h4kE9lATMsX0PKKM07y6rPCt+AV8TE6n1m+8LZzgsBWtO9G/qKHEbQsjx+RCNqEi0zTl6gVSxPfXVQcKocXg==}
     hasBin: true
     peerDependencies:
@@ -2985,7 +2969,7 @@ packages:
       '@solidjs/meta': 0.28.2_solid-js@1.6.5
       '@solidjs/router': 0.6.0_solid-js@1.6.5
       '@types/cookie': 0.5.1
-      '@vinxi/vite-plugin-inspect': 0.6.27_rollup@2.79.1+vite@4.0.2
+      '@vinxi/vite-plugin-inspect': 0.6.27_rollup@2.79.1+vite@4.0.3
       chokidar: 3.5.3
       compression: 1.7.4
       connect: 3.7.0
@@ -3006,9 +2990,9 @@ packages:
       solid-js: 1.6.5
       terser: 5.16.1
       undici: 5.14.0
-      vite: 4.0.2_@types+node@18.11.17
-      vite-plugin-inspect: 0.6.1_vite@4.0.2
-      vite-plugin-solid: 2.5.0_solid-js@1.6.5+vite@4.0.2
+      vite: 4.0.3_@types+node@18.11.17
+      vite-plugin-inspect: 0.6.1_vite@4.0.3
+      vite-plugin-solid: 2.5.0_solid-js@1.6.5+vite@4.0.3
       wait-on: 6.0.1_debug@4.3.4
     transitivePeerDependencies:
       - supports-color
@@ -3195,7 +3179,7 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  /vite-plugin-inspect/0.6.1_vite@4.0.2:
+  /vite-plugin-inspect/0.6.1_vite@4.0.3:
     resolution: {integrity: sha512-MQzIgMoPyiPDuHoO6p7QBOrmheBU/ntg0cgtgcnm21S/Xds5oak1CbVLSAvv4fK1ZpetLK+tlJ+2mlFO9fG3SQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -3206,11 +3190,11 @@ packages:
       kolorist: 1.6.0
       sirv: 2.0.2
       ufo: 0.8.6
-      vite: 4.0.2_@types+node@18.11.17
+      vite: 4.0.3_@types+node@18.11.17
     transitivePeerDependencies:
       - supports-color
 
-  /vite-plugin-solid/2.5.0_solid-js@1.6.5+vite@4.0.2:
+  /vite-plugin-solid/2.5.0_solid-js@1.6.5+vite@4.0.3:
     resolution: {integrity: sha512-VneGd3RyFJvwaiffsqgymeMaofn0IzQLPwDzafTV2f1agoWeeJlk5VrI5WqT9BTtLe69vNNbCJWqLhHr9fOdDw==}
     peerDependencies:
       solid-js: ^1.3.17 || ^1.4.0 || ^1.5.0 || ^1.6.0
@@ -3222,13 +3206,13 @@ packages:
       merge-anything: 5.1.4
       solid-js: 1.6.5
       solid-refresh: 0.4.1_solid-js@1.6.5
-      vite: 4.0.2_@types+node@18.11.17
-      vitefu: 0.2.4_vite@4.0.2
+      vite: 4.0.3_@types+node@18.11.17
+      vitefu: 0.2.4_vite@4.0.3
     transitivePeerDependencies:
       - supports-color
 
-  /vite/4.0.2_@types+node@18.11.17:
-    resolution: {integrity: sha512-QJaY3R+tFlTagH0exVqbgkkw45B+/bXVBzF2ZD1KB5Z8RiAoiKo60vSUf6/r4c2Vh9jfGBKM4oBI9b4/1ZJYng==}
+  /vite/4.0.3_@types+node@18.11.17:
+    resolution: {integrity: sha512-HvuNv1RdE7deIfQb8mPk51UKjqptO/4RXZ5yXSAvurd5xOckwS/gg8h9Tky3uSbnjYTgUm0hVCet1cyhKd73ZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3260,7 +3244,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vitefu/0.2.4_vite@4.0.2:
+  /vitefu/0.2.4_vite@4.0.3:
     resolution: {integrity: sha512-fanAXjSaf9xXtOOeno8wZXIhgia+CZury481LsDaV++lSvcU2R9Ch2bPh3PYFyoHW+w9LqAeYRISVQjUIew14g==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
@@ -3268,7 +3252,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.0.2_@types+node@18.11.17
+      vite: 4.0.3_@types+node@18.11.17
 
   /wait-on/6.0.1_debug@4.3.4:
     resolution: {integrity: sha512-zht+KASY3usTY5u2LgaNqn/Cd8MukxLGjdcZxT2ns5QzDmTFc4XoWBgC+C/na+sMRZTuVygQoMYwdcVjHnYIVw==}
