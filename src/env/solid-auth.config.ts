@@ -35,7 +35,7 @@ export const solidAuthConfig: SolidAuthConfig = {
   },
 }
 
-export const session = (request: Request) => getSession(request, solidAuthConfig)
+export const sessionFromRequest = (request: Request) => getSession(request, solidAuthConfig)
 
 /**
  * Helper function that retrieves the email address of a github user by access token
