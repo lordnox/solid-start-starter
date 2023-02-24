@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@auth/core': ^0.1
+  '@auth/core': ^0.5.0
   '@prisma/client': ^4.8.0
   '@solid-auth/core': ^0.0.6
   '@solid-auth/next': ^0.0.19
@@ -28,10 +28,10 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@auth/core': 0.1.4
+  '@auth/core': 0.5.0
   '@prisma/client': 4.8.0_prisma@4.8.0
   '@solid-auth/core': 0.0.6_x325paymsqc36a356yei3npogq
-  '@solid-auth/next': 0.0.19_ovpwmzjwpbvfkoebnub4xofdci
+  '@solid-auth/next': 0.0.19_v4ykjoy6ivpr6pguxsh6ob2ohe
   '@solid-auth/socials': 0.0.8_ynz2a3spkh7a3mz2o65yfycpqa
   '@solidjs/meta': 0.28.2_solid-js@1.6.6
   '@solidjs/router': 0.7.0_solid-js@1.6.6
@@ -65,18 +65,18 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
 
-  /@auth/core/0.1.4:
-    resolution: {integrity: sha512-RsGtCWzbimuTUfV0ODE8NDxiJ5iDJAR3Wedj5OgdyZxTlCxSirXKf7+6g+krE6gHG3PoOkkd6xN6QENk+D60xw==}
+  /@auth/core/0.5.0:
+    resolution: {integrity: sha512-NZu+H1rfYPewBDelZ4nZn7Vd2i6kVSUZQAcrQtEYylbSVVpVglcAfnHDq0FsIFXN1czQk13qdmm+CbIEr/C+iA==}
     peerDependencies:
-      nodemailer: 6.8.0
+      nodemailer: ^6.8.0
     peerDependenciesMeta:
       nodemailer:
         optional: true
     dependencies:
-      '@panva/hkdf': 1.0.2
+      '@panva/hkdf': 1.0.4
       cookie: 0.5.0
       jose: 4.11.1
-      oauth4webapi: 2.0.5
+      oauth4webapi: 2.1.0
       preact: 10.11.3
       preact-render-to-string: 5.2.3_preact@10.11.3
     dev: false
@@ -1418,8 +1418,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.14.0
 
-  /@panva/hkdf/1.0.2:
-    resolution: {integrity: sha512-MSAs9t3Go7GUkMhpKC44T58DJ5KGk2vBo+h1cqQeqlMfdGkxaVB78ZWpv9gYi/g2fa4sopag9gJsNvS8XGgWJA==}
+  /@panva/hkdf/1.0.4:
+    resolution: {integrity: sha512-003xWiCuvePbLaPHT+CRuaV4GlyCAVm6XYSbBZDHoWZGn1mNkVKFaDbGJjjxmEFvizUwlCoM6O18FCBMMky2zQ==}
     dev: false
 
   /@polka/url/1.0.0-next.21:
@@ -1524,14 +1524,14 @@ packages:
       solid-start: 0.2.8_m5bcqx2tluzydesbr25vqe2z7m
     dev: false
 
-  /@solid-auth/next/0.0.19_ovpwmzjwpbvfkoebnub4xofdci:
+  /@solid-auth/next/0.0.19_v4ykjoy6ivpr6pguxsh6ob2ohe:
     resolution: {integrity: sha512-aGcEePidVKh6iYS5JHghv/MFKh1mE0PQUmD8+dHiRRWcnVOF38fyHTz5L5PQCmrl8xE9J8rK3ymVlt0lzw2dQg==}
     peerDependencies:
       '@auth/core': ~0.1.4 || ^0.1.4
       solid-js: ^1.5.7
       solid-start: ^0.2.1
     dependencies:
-      '@auth/core': 0.1.4
+      '@auth/core': 0.5.0
       set-cookie-parser: 2.5.1
       solid-js: 1.6.6
       solid-start: 0.2.8_m5bcqx2tluzydesbr25vqe2z7m
@@ -2568,8 +2568,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /oauth4webapi/2.0.5:
-    resolution: {integrity: sha512-KmoR3KxCwmr9KvL/c/6UVzQnc4CUjo+j8NSgD3bWYlZXpUmyOVw97nDVb0BKZhCcUtGsbll16v8vsnR5JbTZ9A==}
+  /oauth4webapi/2.1.0:
+    resolution: {integrity: sha512-0YjXQA3viCby/So8rja4sBrdLMTTyzuQTzotMTT6uAgqmqanrpt8eBfLLaugUZaMZSzt3IdjJdGadr5YTC+Cww==}
     dev: false
 
   /object-hash/3.0.0:
