@@ -26,7 +26,7 @@
     "@auth/core": "^0.1",
     "@prisma/client": "^4.8.0",
     "@solid-auth/core": "^0.0.6",
-    "@solid-auth/next": "^0.0.19",
+    "@solid-auth/next": "^0.0.23",
     "@solid-auth/socials": "^0.0.8",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.0",
