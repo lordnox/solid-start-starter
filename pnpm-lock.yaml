@@ -14,7 +14,7 @@ specifiers:
   autoprefixer: ^10.4.13
   dotenv: ^16.0.3
   postcss: ^8.4.20
-  prettier: ^2.8.1
+  prettier: ^3.0.0
   prisma: ^4.8.0
   solid-js: ^1.6.6
   solid-start: ^0.2.8
@@ -49,7 +49,7 @@ devDependencies:
   '@types/node': 18.11.17
   autoprefixer: 10.4.13_postcss@8.4.20
   postcss: 8.4.20
-  prettier: 2.8.1
+  prettier: 3.0.0
   prisma: 4.8.0
   solid-start-node: 0.2.8_orexwshzq2wnnlc5vfg7enkwhq
   tailwindcss: 3.2.4_postcss@8.4.20
@@ -2716,9 +2716,9 @@ packages:
     resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
     dev: false
 
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
-    engines: {node: '>=10.13.0'}
+  /prettier/3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
