@@ -34,7 +34,7 @@
     "@trpc/server": "^10.7.0",
     "dotenv": "^16.0.3",
     "solid-js": "^1.6.6",
-    "solid-start": "^0.2.8",
+    "solid-start": "^0.3.0",
     "solid-start-trpc": "^0.0.16",
     "solid-start-vercel": "^0.2.8",
     "undici": "^5.14.0",
