@@ -23,7 +23,7 @@
     "vite": "^4.0.3"
   },
   "dependencies": {
-    "@auth/core": "^0.1",
+    "@auth/core": "^0.28.0",
     "@prisma/client": "^4.8.0",
     "@solid-auth/core": "^0.0.6",
     "@solid-auth/next": "^0.0.19",

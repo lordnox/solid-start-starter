@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@auth/core': ^0.1
+  '@auth/core': ^0.28.0
   '@prisma/client': ^4.8.0
   '@solid-auth/core': ^0.0.6
   '@solid-auth/next': ^0.0.19
@@ -28,10 +28,10 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@auth/core': 0.1.4
+  '@auth/core': 0.28.0
   '@prisma/client': 4.8.0_prisma@4.8.0
   '@solid-auth/core': 0.0.6_x325paymsqc36a356yei3npogq
-  '@solid-auth/next': 0.0.19_ovpwmzjwpbvfkoebnub4xofdci
+  '@solid-auth/next': 0.0.19_5nggxlt35h2ztzu52hh67d6tiq
   '@solid-auth/socials': 0.0.8_ynz2a3spkh7a3mz2o65yfycpqa
   '@solidjs/meta': 0.28.2_solid-js@1.6.6
   '@solidjs/router': 0.8.0_solid-js@1.6.6
@@ -65,18 +65,25 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
 
-  /@auth/core/0.1.4:
-    resolution: {integrity: sha512-RsGtCWzbimuTUfV0ODE8NDxiJ5iDJAR3Wedj5OgdyZxTlCxSirXKf7+6g+krE6gHG3PoOkkd6xN6QENk+D60xw==}
+  /@auth/core/0.28.0:
+    resolution: {integrity: sha512-/fh/tb/L4NMSYcyPoo4Imn8vN6MskcVfgESF8/ndgtI4fhD/7u7i5fTVzWgNRZ4ebIEGHNDbWFRxaTu1NtQgvA==}
     peerDependencies:
-      nodemailer: 6.8.0
+      '@simplewebauthn/browser': ^9.0.1
+      '@simplewebauthn/server': ^9.0.2
+      nodemailer: ^6.8.0
     peerDependenciesMeta:
+      '@simplewebauthn/browser':
+        optional: true
+      '@simplewebauthn/server':
+        optional: true
       nodemailer:
         optional: true
     dependencies:
-      '@panva/hkdf': 1.0.2
-      cookie: 0.5.0
-      jose: 4.11.1
-      oauth4webapi: 2.0.5
+      '@panva/hkdf': 1.1.1
+      '@types/cookie': 0.6.0
+      cookie: 0.6.0
+      jose: 5.2.2
+      oauth4webapi: 2.10.3
       preact: 10.11.3
       preact-render-to-string: 5.2.3_preact@10.11.3
     dev: false
@@ -1418,8 +1425,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.14.0
 
-  /@panva/hkdf/1.0.2:
-    resolution: {integrity: sha512-MSAs9t3Go7GUkMhpKC44T58DJ5KGk2vBo+h1cqQeqlMfdGkxaVB78ZWpv9gYi/g2fa4sopag9gJsNvS8XGgWJA==}
+  /@panva/hkdf/1.1.1:
+    resolution: {integrity: sha512-dhPeilub1NuIG0X5Kvhh9lH4iW3ZsHlnzwgwbOlgwQ2wG1IqFzsgHqmKPk3WzsdWAeaxKJxgM0+W433RmN45GA==}
     dev: false
 
   /@polka/url/1.0.0-next.21:
@@ -1524,14 +1531,14 @@ packages:
       solid-start: 0.2.8_2dcssulvq4bjw6aavgl5aplb2e
     dev: false
 
-  /@solid-auth/next/0.0.19_ovpwmzjwpbvfkoebnub4xofdci:
+  /@solid-auth/next/0.0.19_5nggxlt35h2ztzu52hh67d6tiq:
     resolution: {integrity: sha512-aGcEePidVKh6iYS5JHghv/MFKh1mE0PQUmD8+dHiRRWcnVOF38fyHTz5L5PQCmrl8xE9J8rK3ymVlt0lzw2dQg==}
     peerDependencies:
       '@auth/core': ~0.1.4 || ^0.1.4
       solid-js: ^1.5.7
       solid-start: ^0.2.1
     dependencies:
-      '@auth/core': 0.1.4
+      '@auth/core': 0.28.0
       set-cookie-parser: 2.5.1
       solid-js: 1.6.6
       solid-start: 0.2.8_2dcssulvq4bjw6aavgl5aplb2e
@@ -1592,6 +1599,10 @@ packages:
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
+
+  /@types/cookie/0.6.0:
+    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
+    dev: false
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -1915,8 +1926,8 @@ packages:
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
 
-  /cookie/0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+  /cookie/0.6.0:
+    resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
     dev: false
 
@@ -2453,8 +2464,8 @@ packages:
       '@sideway/formula': 3.0.1
       '@sideway/pinpoint': 2.0.0
 
-  /jose/4.11.1:
-    resolution: {integrity: sha512-YRv4Tk/Wlug8qicwqFNFVEZSdbROCHRAC6qu/i0dyNKr5JQdoa2pIGoS04lLO/jXQX7Z9omoNewYIVIxqZBd9Q==}
+  /jose/5.2.2:
+    resolution: {integrity: sha512-/WByRr4jDcsKlvMd1dRJnPfS1GVO3WuKyaurJ/vvXcOaUQO8rnNObCQMlv/5uCceVQIq5Q4WLF44ohsdiTohdg==}
     dev: false
 
   /js-tokens/4.0.0:
@@ -2568,8 +2579,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /oauth4webapi/2.0.5:
-    resolution: {integrity: sha512-KmoR3KxCwmr9KvL/c/6UVzQnc4CUjo+j8NSgD3bWYlZXpUmyOVw97nDVb0BKZhCcUtGsbll16v8vsnR5JbTZ9A==}
+  /oauth4webapi/2.10.3:
+    resolution: {integrity: sha512-9FkXEXfzVKzH63GUOZz1zMr3wBaICSzk6DLXx+CGdrQ10ItNk2ePWzYYc1fdmKq1ayGFb2aX97sRCoZ2s0mkDw==}
     dev: false
 
   /object-hash/3.0.0:
